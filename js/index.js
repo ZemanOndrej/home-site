@@ -1,2 +1,15 @@
 require('../css/index.styl')
-document.querySelector("#first").innerHTML="hello world23fvhfjsdkahfjsadhfjasdfsd";
+
+function changeMenuFocus(e) {
+
+    let lastbtn = document.querySelector('.active')
+    if (lastbtn) {
+        lastbtn.classList.remove('active');
+    }
+    e.target.className += "active"
+
+}
+(() => {
+    document.querySelectorAll(".navbtn")
+        .forEach(b => b.addEventListener("click", changeMenuFocus));
+})()
