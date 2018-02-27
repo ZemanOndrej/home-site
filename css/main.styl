@@ -1,8 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ccc;
+  transition: opacity 500ms ease-in-out;
 }
+.hidden
+  display: none
  
 nav, header
     position fixed
@@ -24,6 +26,8 @@ nav, header
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+  display: inline-block;
+  margin-right: -4px;
 }
  
 .nav a {
@@ -52,23 +56,22 @@ nav, header
     font-size: 1.4em;
   }
  
-  /* Option 1 - Display Inline */
-  .nav li {
-    display: inline-block;
-    margin-right: -4px;
+  .main{
+    margin-top: 50px
+    }
+
+}
+@media screen and (max-width 600px){
+ .nav li {
+    width: 90px;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.2em;
   }
- 
-  /* Options 2 - Float
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
+  .main{
+    margin-top: 40px
+
+    }
+
 }

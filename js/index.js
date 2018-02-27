@@ -11,13 +11,10 @@ function changeMenuFocus(e) {
     smoothScroll(document.querySelector(e.target.hash));
     window.location.href = e.target.hash;
 }
-(() => {
-    document.querySelectorAll(".navbtn")
-        .forEach(b => b.addEventListener("click", changeMenuFocus));
-})()
 
 
-window.smoothScroll = function (target) {
+
+window.smoothScroll = (target) => {
     var scrollContainer = target;
     do { //find scroll container
         scrollContainer = scrollContainer.parentNode;
@@ -39,3 +36,18 @@ window.smoothScroll = function (target) {
     // start scrolling
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
+
+
+
+(() => {
+    document.querySelectorAll(".navbtn")
+        .forEach(b => b.addEventListener("click", changeMenuFocus));
+
+    window.onload = () => {
+        setTimeout(() => {
+            document.body.style.opacity = "100";
+        }, 1);
+    };
+
+})()
+
