@@ -1,10 +1,14 @@
-body {
+body 
   margin: 0;
   padding: 0;
   transition: opacity 500ms ease-in-out;
-}
-.hidden
-  display: none
+  font-family: 'Oswald', sans-serif;
+  color #fff
+
+a 
+  text-decoration: none
+  &:visited
+    color: inherit;
  
 nav, header
     position fixed
@@ -12,15 +16,15 @@ nav, header
     top: 0
     z-index: 1000
 
-.nav ul {
+.nav ul 
   list-style: none;
   background-color: #444;
   text-align: center;
   padding: 0;
   margin: 0;
   width: 100vw
-}
-.nav li {
+
+.nav li 
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
   line-height: 40px;
@@ -28,50 +32,49 @@ nav, header
   border-bottom: 1px solid #888;
   display: inline-block;
   margin-right: -4px;
-}
+
  
-.nav a {
+.nav a 
   text-decoration: none;
   color: #fff;
   display: block;
   transition: .3s background-color;
-}
+
  
-.nav a:hover {
-  background-color: #005f5f;
-}
+.nav a:hover 
+  background-color: #052600;
+
  
-.nav a.active {
+.nav a.active 
   background-color: #fff;
   color: #444;
   cursor: default;
-}
+
  
-@media screen and (min-width: 600px) {
-  .nav li {
+@media screen and (min-width: 600px) 
+  .nav li 
     width: 120px;
     border-bottom: none;
     height: 50px;
     line-height: 50px;
     font-size: 1.4em;
-  }
+  
  
-  .main{
+  .main
     margin-top: 50px
-    }
+    
 
-}
-@media screen and (max-width 600px){
- .nav li {
+
+@media screen and (max-width 600px)
+ .nav li
     width: 90px;
     border-bottom: none;
     height: 40px;
     line-height: 40px;
     font-size: 1.2em;
-  }
-  .main{
+  
+  .main
     margin-top: 40px
 
-    }
+    
 
-}
