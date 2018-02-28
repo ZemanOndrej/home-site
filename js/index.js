@@ -1,4 +1,5 @@
 require('../css/index.styl')
+import jump from 'jump.js'
 
 function changeMenuFocus(e) {
 
@@ -8,33 +9,8 @@ function changeMenuFocus(e) {
         lastbtn.classList.remove('active');
     }
     e.target.className += "active";
-    smoothScroll(document.querySelector(e.target.hash));
+    jump(e.target.hash,{duration: 250})
     window.location.href = e.target.hash;
-}
-
-
-
-window.smoothScroll = (target) => {
-    var scrollContainer = target;
-    do { //find scroll container
-        scrollContainer = scrollContainer.parentNode;
-        if (!scrollContainer) return;
-        scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop == 0);
-
-    var targetY = 0;
-    do { //find the top of target relatively to the container
-        if (target == scrollContainer) break;
-        targetY += target.offsetTop;
-    } while (target = target.offsetParent);
-
-    scroll = function (c, a, b, i) {
-        i++; if (i > 30) return;
-        c.scrollTop = a + (b - a) / 30 * i;
-        setTimeout(function () { scroll(c, a, b, i); }, 10);
-    }
-    // start scrolling
-    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
 
