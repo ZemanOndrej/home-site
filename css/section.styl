@@ -20,7 +20,7 @@
     top: 50%;
     transform: translate(0, -50%);
     width: 100%;
-.main-section h1 , .main-section h5
+.heading-text
     text-align: center;
     font-size: 1.8em;
     color: white
@@ -105,14 +105,49 @@
         opacity 1
 #MyStuff
     background-color: #000816
-    height: 100vh
-.mystuff
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     font-size: 1.3em
-    height: 100%
     & h1
         text-align: center
         margin-top: 0
+        margin-bottom: 0
         padding-top: 25px
+    
+.mystuff-flexbox
+    display flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin: 100px 300px 0 300px
+
+
+.mystuff-item
+    overflow: hidden;
+    width: 300px
+    background-color: black
+    margin: 20px
+    height 300px
+    text-align: center
+    border: black solid 2px
+    position relative
+    & img 
+        height 100%
+        max-width: 100%;
+        transition: all 0.3s;
+        position relative
+        filter: blur(3px) brightness(50%)
+        &:hover
+            transform: scale(1.1) 
+            filter blur(0) brightness(100%)
+    
+.mystuff-item-content
+    position absolute
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3em
+    font-family: "Impact"
 
 
     
