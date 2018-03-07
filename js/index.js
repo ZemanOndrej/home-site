@@ -28,6 +28,11 @@ function changeActiveSection(section) {
 
     let btn = document.querySelector(section)
     console.log(btn,section)
+    if(btn===null){
+        history.pushState(null, null, `#Home`);
+        document.querySelector("#btn-home").className += "active";
+        return;
+    }
     btn.className += "active";
     history.pushState(null, null, `#${btn.href.split('#')[1]}`);
 

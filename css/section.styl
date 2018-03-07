@@ -1,5 +1,4 @@
-
-.home
+#Home
     height 100vh
 .main
     overflow hidden
@@ -30,7 +29,6 @@
 
 #About
     background-color: #1d2112
-    height: 33vh
     margin-top -1px
 #heading-about h1
     text-align: center
@@ -38,11 +36,9 @@
 
 .about-section
     display flex
-    justify-content: space-around
-    flex-direction row
+    justify-content: space-evenly
+    flex-wrap: wrap
     background-color: #1c2119
-    height 100%
-
 
 .about-item
     margin: 10px 20px 10px 20px
@@ -54,14 +50,14 @@
     justify-content: center
     opacity 0.4
     transition opacity 0.5s
+    width 33%
     &:hover
         opacity 1
     & h3
         text-align: center
     & p
         margin: 40px 40px 40px 40px
-    
-.contact
+#Contact
     background-color: #333a47
     color: white
     height 15vh    
@@ -82,20 +78,7 @@
     display: flex
     height: 100%
     align-items: center
-
-@media screen and (max-width: 600px) 
-    .contact-section-wrapper .heading
-        display: none
-    
-    .contact-icons
-        flex-grow: 1
-        display flex
-        justify-content: space-evenly
-
-    
-    .contact-section-wrapper
-        width: 100%
-    
+ 
 
 .icon
     margin 0px 10px 0px 10px
@@ -119,8 +102,7 @@
     display flex
     justify-content: space-around
     flex-wrap: wrap
-    margin: 100px 300px 0 300px
-
+    margin: 100px 300px 100px 300px
 
 .mystuff-item
     overflow: hidden;
@@ -148,6 +130,22 @@
     transform: translate(-50%, -50%);
     font-size: 1.3em
     font-family: "Impact"
+
+@media screen and (max-width: 600px) 
+    .contact-section-wrapper .heading
+        display: none
+    
+    .contact-icons
+        flex-grow: 1
+        display flex
+        justify-content: space-evenly
+
+    .contact-section-wrapper
+        width: 100%
+    .about-item
+        width: 100%
+    .mystuff-flexbox
+        margin: 100px 0 100px 0
 
 
     
