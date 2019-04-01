@@ -1,151 +1,218 @@
-#Home
-    height 100vh
-.main
-    overflow hidden
-#homeImage
-    background-image: url("https://i.imgur.com/bnJHhVC.png")
-    background-repeat: no-repeat
-    background-color #052600
-    filter blur(1px) brightness(50%)
-    z-index 0
-    margin-top: -20px 
-    margin-left: -10px
-    width: auto ;
-    height: 100% ;
+#Home {
+    height: 100vh;
+}
 
-.main-section 
+.main {
+    overflow: hidden;
+}
+
+#homeImage {
+    background-image: url('https://i.imgur.com/bnJHhVC.png');
+    background-repeat: no-repeat;
+    background-color: #052600;
+    filter: blur(1px) brightness(50%);
+    z-index: 0;
+    margin-top: -20px;
+    margin-left: -10px;
+    width: auto;
+    height: 100%;
+}
+
+.main-section {
     position: absolute;
     left: 0;
     top: 50%;
     transform: translate(0, -50%);
     width: 100%;
-.heading-text
+}
+
+.heading-text {
     text-align: center;
     font-size: 1.8em;
-    color: white
+    color: white;
+}
 
-.main-section h1 
-    font-size: 2.5em
+.main-section h1 {
+    font-size: 2.5em;
+}
 
-#About
-    background-color: #1d2112
-    margin-top -1px
-#heading-about h1
-    text-align: center
-    padding 20px 0 20px 0
+#About {
+    margin-top: -1px;
+    background-color: #31381A;
+}
 
-.about-section
-    display flex
-    justify-content: space-evenly
-    flex-wrap: wrap
-    background-color: #1c2119
+#heading-about h1 {
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
 
-.about-item
-    margin: 10px 20px 10px 20px
-    background-color: #627087
-    flex-basis: auto
-    color: #fff
-    display: flex
-    flex-direction: column
-    justify-content: center
-    opacity 0.4
-    transition opacity 0.5s
-    width 33%
-    &:hover
-        opacity 1
-    & h3
-        text-align: center
-    & p
-        margin: 40px 40px 40px 40px
-#Contact
-    background-color: #333a47
-    color: white
-    height 15vh    
+.about-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
-.contact-section-wrapper
-    flex-grow: 1
-    display flex
-    justify-content: space-evenly
-    height: 100%
-    & .heading
-        font-size: 1.3em
-        height: 100%
+.about-item {
+    margin: 10px 20px 10px 20px;
+    background-color: #171910;
+    flex-basis: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.4;
+    transition: opacity 0.5s;
+    width: 33%;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    & h3 {
+        text-align: center;
+    }
+
+    & p {
+        margin: 40px 40px 40px 40px;
+        line-height: 1.5em;
+    }
+}
+
+#Contact {
+    background-color: #2C311D;
+    color: white;
+    height: 15vh;
+}
+
+.contact-section-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+
+    & .heading {
+        font-size: 1.3em;
+        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;  
-        
-.contact-icons
-    display: flex
-    height: 100%
-    align-items: center
- 
+        align-items: center;
+    }
+}
 
-.icon
-    margin 0px 10px 0px 10px
-    opacity 0.5
-    transition: opacity 0.3s
-    &:hover
-        opacity 1
-#MyStuff
-    background-color: #000816
+.contact-icons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.icon {
+    margin: 0px 10px 0px 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    & .contact-icon {
+        color: #fff !important;
+    }
+}
+
+#MyStuff {
+    background-color: #27291F;
     display: flex;
     flex: 1;
     flex-direction: column;
-    font-size: 1.3em
-    & h1
-        text-align: center
-        margin-top: 0
-        margin-bottom: 0
-        padding-top: 25px
-    
-.mystuff-flexbox
-    display flex
-    justify-content: space-around
-    flex-wrap: wrap
-    margin: 100px 300px 100px 300px
+    font-size: 1.3em;
 
-.mystuff-item
+    & h1 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 25px;
+    }
+}
+
+.mystuff-flexbox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 100px 300px 100px 300px;
+}
+
+.mystuff-item {
     overflow: hidden;
-    width: 300px
-    background-color: black
-    margin: 20px
-    height 300px
-    text-align: center
-    border: black solid 2px
-    position relative
-    & img 
-        height 100%
+    width: 300px;
+    background-color: black;
+    margin: 20px;
+    height: 300px;
+    text-align: center;
+    border: black solid 2px;
+    position: relative;
+
+    & img {
+        height: 100%;
         max-width: 100%;
         transition: all 0.3s;
-        position relative
-        filter: blur(3px) brightness(50%)
-    &:hover img
-        transform: scale(1.1) 
-        filter blur(0) brightness(100%)
-    
-.mystuff-item-content
-    position absolute
+        position: relative;
+        filter: blur(3px) brightness(50%);
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+        filter: blur(0) brightness(100%);
+    }
+}
+
+.mystuff-item-content {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.3em
-    font-family: "Impact"
+    font-size: 1.3em;
+    font-family: 'Impact';
 
-@media screen and (max-width: 600px) 
-    .contact-section-wrapper .heading
-        display: none
-    
-    .contact-icons
-        flex-grow: 1
-        display flex
-        justify-content: space-evenly
+    & a {
+        color: #fff !important;
+    }
+}
 
-    .contact-section-wrapper
-        width: 100%
-    .about-item
-        width: 100%
-    .mystuff-flexbox
-        margin: 100px 0 100px 0
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: #222222;
+    width: 100%;
 
+    & .copyright-container {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+    }
+}
 
-    
+@media screen and (max-width: 600px) {
+    .contact-section-wrapper .heading {
+        display: none;
+    }
+
+    .contact-icons {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contact-section-wrapper {
+        width: 100%;
+    }
+
+    .about-item {
+        width: 100%;
+    }
+
+    .mystuff-flexbox {
+        margin: 100px 0 100px 0;
+    }
+}
